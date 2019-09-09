@@ -26,6 +26,7 @@ var cards = [
 var cardsInPlay = []
 var gameOutcomeText //show win or lose text
 var gameOutcome //change color of text based on win or lose
+var gameScore = 0 //set gamescore to zero
 
 
 function createBoard(){
@@ -44,6 +45,7 @@ function checkForMatch(){
       //alert("You found a match");
       gameOutcomeText = "You found a match!";
       gameOutcome = "win";
+      gameScore ++;
     } else {
       //alert("Sorry, try again");
       gameOutcomeText = "Sorry try again";
@@ -63,6 +65,7 @@ function flipCard(){
     checkForMatch();
     //result text and button
     document.getElementById("game-result").textContent = gameOutcomeText;
+    document.getElementById("game-score").textContent = gameScore;
     document.getElementById("game-result").setAttribute("class", gameOutcome);
     document.getElementById("reset-cards").setAttribute("class", "show");
     document.getElementById("reset-score").setAttribute("class", "show");
@@ -90,8 +93,14 @@ function gameReset(){
   createBoard();
 };
 
+function scoreReset(){
+  gameScore = 0;
+  document.getElementById("game-score").textContent = "";
+  gameReset();
+};
+
 document.getElementById("reset-cards").addEventListener("click", gameReset);
-//document.getElementById("reset-score").addEventListener("click", scoreReset);
+document.getElementById("reset-score").addEventListener("click", scoreReset);
 createBoard();
 
 /*
