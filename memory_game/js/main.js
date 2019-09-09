@@ -26,7 +26,8 @@ var cards = [
 var cardsInPlay = []
 var gameOutcomeText //show win or lose text
 var gameOutcome //change color of text based on win or lose
-var gameScore = 0 //set gamescore to zero
+var gameWins = 0 //set gameWins to zero
+var gameLoses = 0 //set gameLoses to zero
 
 
 function createBoard(){
@@ -45,11 +46,12 @@ function checkForMatch(){
       //alert("You found a match");
       gameOutcomeText = "You found a match!";
       gameOutcome = "win";
-      gameScore ++;
+      gameWins ++;
     } else {
       //alert("Sorry, try again");
       gameOutcomeText = "Sorry try again";
       gameOutcome = "lose";
+      gameLoses ++;
     }
 };
 
@@ -65,10 +67,11 @@ function flipCard(){
     checkForMatch();
     //result text and button
     document.getElementById("game-result").textContent = gameOutcomeText;
-    document.getElementById("game-score").textContent = gameScore;
+    var gameResult = (gameWins + gameLoses);
+    document.getElementById("game-score").textContent = gameWins + " out of " + gameResult;
     document.getElementById("game-result").setAttribute("class", gameOutcome);
-    document.getElementById("reset-cards").setAttribute("class", "show");
-    document.getElementById("reset-score").setAttribute("class", "show");
+    document.getElementById("reset-cards").setAttribute("class", "show"); //show button
+    document.getElementById("reset-score").setAttribute("class", "show"); //show button
   } else {
     console.log("not two");
 
@@ -87,15 +90,14 @@ function cardReset(){
 function gameReset(){
   document.getElementById("reset-cards").setAttribute("class", "hide"); //hides reset button
   document.getElementById("reset-score").setAttribute("class", "hide"); //hides reset button
-  document.getElementById("game-result").textContent = ""; //hides win/lose text
   cardsInPlay = []; //sets back to no cards selected
   cardReset();
   createBoard();
 };
 
 function scoreReset(){
-  gameScore = 0;
-  document.getElementById("game-score").textContent = "";
+  gameWins = 0;
+  document.getElementById("game-score").textContent = "0" //reverts win/lose score;
   gameReset();
 };
 
