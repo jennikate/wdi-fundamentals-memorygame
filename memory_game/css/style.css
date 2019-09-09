@@ -75,6 +75,28 @@ a:hover {
   border-color: #FFFFFF;
 }
 
+/* Additional Items for messages, buttons, scores */
+.win {
+  color: green;
+}
+.lose {
+  color: red;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.clickable {
+  pointer-events: auto;
+}
+.non-clickable {
+  pointer-events: none;
+}
+
+/* Footer Specific*/
+
 footer {
   text-transform: uppercase;
   padding: 0 20px;
