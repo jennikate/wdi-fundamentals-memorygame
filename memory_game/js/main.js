@@ -67,8 +67,8 @@ function flipCard(){
     checkForMatch();
     //result text and button
     document.getElementById("game-result").textContent = gameOutcomeText;
-    var gameResult = (gameWins + gameLoses);
-    document.getElementById("game-score").textContent = gameWins + " out of " + gameResult;
+    var totalGames = (gameWins + gameLoses);
+    document.getElementById("game-score").textContent = gameWins + " out of " + totalGames;
     document.getElementById("game-result").setAttribute("class", gameOutcome);
     document.getElementById("reset-cards").setAttribute("class", "show"); //show button
     document.getElementById("reset-score").setAttribute("class", "show"); //show button
@@ -90,6 +90,7 @@ function cardReset(){
 function gameReset(){
   document.getElementById("reset-cards").setAttribute("class", "hide"); //hides reset button
   document.getElementById("reset-score").setAttribute("class", "hide"); //hides reset button
+  document.getElementById("game-result").textContent = ""; //set game result text to null
   cardsInPlay = []; //sets back to no cards selected
   cardReset();
   createBoard();
