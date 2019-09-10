@@ -43,12 +43,12 @@ function createBoard(){
 function checkForMatch(){
   console.log(cardsInPlay.length);
     if (cardsInPlay[0] === cardsInPlay[1]) {
-      //alert("You found a match");
+      //alert("You found a match"); - replaced alert with on screen message
       gameOutcomeText = "You found a match!";
       gameOutcome = "win";
       gameWins ++;
     } else {
-      //alert("Sorry, try again");
+      //alert("Sorry, try again"); - replaced alert with on screen message
       gameOutcomeText = "Sorry try again";
       gameOutcome = "lose";
       gameLoses ++;
@@ -74,7 +74,6 @@ function flipCard(){
     document.getElementById("reset-score").setAttribute("class", "show"); //show button
   } else {
     console.log("not two");
-
     }
 };
 
@@ -96,16 +95,17 @@ function gameReset(){
   createBoard();
 };
 
+//reset the score
 function scoreReset(){
   gameWins = 0;
-  document.getElementById("game-score").textContent = "0" //reverts win/lose score;
+  gameLoses = 0;
+  document.getElementById("game-score").textContent = "0"
   gameReset();
 };
 
+//listeners for buttons
 document.getElementById("reset-cards").addEventListener("click", gameReset);
 document.getElementById("reset-score").addEventListener("click", scoreReset);
+
+//create
 createBoard();
-
-/*
-
-*/
