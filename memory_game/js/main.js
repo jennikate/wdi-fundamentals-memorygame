@@ -1,6 +1,5 @@
 
 //console.log("up and running");
-//adding a comment so I can test git stuff
 
 var cards = [
   {
