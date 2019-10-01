@@ -1,0 +1,142 @@
+.clearfix:after {
+visibility: hidden;
+display: block;
+content: " ";
+clear: both;
+height: 0;
+font-size: 0;
+}
+
+body {
+  text-align: center;
+  margin: 0;
+}
+
+header {
+  background-color: #F15B31;
+  color: #FFFFFF;
+  padding: 30px 20px;
+}
+
+h1 {
+  font-family: Raleway, sans-serif;
+  /*color: #0D2C40;*/
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 45px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+nav {
+  background-color: #00A6B3;
+  color: #FFFFFF;
+  padding: 20px 0;
+}
+
+nav a {
+  font-family: Raleway, sans-sans-serif;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+main {
+  width: 850px;
+  margin: 35px auto;
+}
+
+h2 {
+  font-family: Raleway, sans-serif;
+  color: #0D2C40;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+p {
+  font-family: "Droid Serif", serif;
+  line-height: 26px;
+  font-size: 18px;
+}
+
+img {
+  margin: 40px 8px 0;
+}
+
+a {
+  border-bottom: 2px solid transparent;
+}
+a:hover {
+  border-color: #FFFFFF;
+}
+
+/* Additional Items for messages, buttons, scores */
+button {
+  background-color: #FFFFFF;
+  font-size: 20px;
+  color: #f15b31;
+  padding: 15px 25px;
+  border-radius: 3px;
+  border: 3px solid #f15b31;
+}
+button:hover {
+  background-image: linear-gradient(rgba(241, 91, 49,1), rgba(241, 91, 49,0.5));
+  border: 3px double #f15b31;
+  color: #FFFFFF;
+}
+#game-result {
+  font-size: 30px;
+  margin: 20px;
+  font-family: Raleway, sans-serif;
+}
+.win {
+  color: green;
+}
+.lose {
+  color: red;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: inline;
+}
+.clickable {
+  pointer-events: auto;
+}
+.non-clickable {
+  pointer-events: none;
+}
+
+/* Footer Specific*/
+
+footer {
+  text-transform: uppercase;
+  padding: 0 20px;
+  background-color: #0D2C40;
+  color: #FFFFFF;
+  font-size: 14px;
+  letter-spacing: 0.8em;
+  font-weight: 500;
+  font-family: Raleway, sans-serif;
+}
+
+footer p {
+  font-family: Raleway, sans-serif;
+}
+
+.copyright {
+  float: left;
+}
+.message {
+  float: right;
+}
+.name {
+  font-weight: 700;
+  color: #F15B31;
+}
